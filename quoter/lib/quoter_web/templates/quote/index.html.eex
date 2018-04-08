@@ -2,7 +2,9 @@
   <div class="col-md-3">
     <h3>Quotes</h3>
     <ul class="list-group">
-      <%= inspect @quotes %>
+      <%= for quote <- @quotes do %>
+      <li class="list-group-item"><%= quote.body %></li>
+      <% end %>
     </ul>
   </div>
   <div class="col-md-9">

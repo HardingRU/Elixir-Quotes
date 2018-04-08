@@ -1,10 +1,8 @@
 defmodule Quoter.Information do
+  alias Quoter.Repo
+  alias Quoter.Information.Quote
+
   def list_quotes do
-    [
-      %{
-        author: "BMart",
-        body: "TUNA TUNA TUNA"
-      }
-    ]
+    Repo.all(Quote)
   end
 end
