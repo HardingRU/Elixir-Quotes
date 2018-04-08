@@ -1,0 +1,3 @@
+<h2>Quote Information</h2>
+<h3>"<%= @quote.body %>"</h3>
+<h3>- <%= @quote.author %></h3>

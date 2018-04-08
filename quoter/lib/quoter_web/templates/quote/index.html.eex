@@ -5,7 +5,9 @@
 </h3>
     <ul class="list-group">
       <%= for quote <- @quotes do %>
-      <li class="list-group-item"><%= quote.body %></li>
+      <li class="list-group-item">
+        <%= link quote.author, to: quote_path(@conn, :show, quote.id) %>
+      </li>
       <% end %>
     </ul>
   </div>
