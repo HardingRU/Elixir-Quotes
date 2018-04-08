@@ -5,4 +5,8 @@ defmodule Quoter.Information do
   def list_quotes do
     Repo.all(Quote)
   end
+
+  def change_quote(%Quote{} = quote) do
+  Quote.changeset(quote, %{})
+  end
 end
